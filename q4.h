@@ -53,14 +53,13 @@ public:
         last->setNext(temp1);
     }
 
-  void removeCourse(course* name)
+  void removeCourse(string removal)
   {
-    string removal;
+    //string removal;
     cout << "Which course do you want to remove from the list? " << endl;
     cin >> removal;
-    name = course(removal);
 
-    course* curr = name;
+    course* curr = firstcourse;
     course* last = curr;
 
     while (curr!=NULL)

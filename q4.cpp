@@ -37,7 +37,7 @@ int main()
         }
         else if (option == 'R')
         {
-            C->removeCourse(name);
+            C->removeCourse(title);
 
         }
         else
