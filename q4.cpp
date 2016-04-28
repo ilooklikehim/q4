@@ -20,7 +20,7 @@ int main()
     {
         cout << "Add a course (C)" << endl;
         cout << "Display all courses (D)" << endl;
-        cout << "Delete a course (R)" << endl;
+        cout << "Remove a course (R)" << endl;
         cout << "Quit (Q)" << endl;
         cin >> option;
 

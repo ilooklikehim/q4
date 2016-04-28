@@ -56,7 +56,7 @@ public:
   void removeCourse(course *temp1)
   {
     string removal;
-    cout << "Which value do you want to delete from the list? ";
+    cout << "Which course do you want to remove from the list? " << endl;
     cin >> removal;
 
     course* curr = firstcourse;
@@ -66,12 +66,12 @@ public:
     {
         if (curr->getName() == removal)
         {
-            last->next = curr->next;
+            last = curr;
+            curr = curr->getNext();
             delete curr;
             return;
         }
-        last = curr;
-        curr = curr->next;
+        last->setNext(curr);
     }
     if (!curr){
         cout << "That name is not in the list" << endl;
