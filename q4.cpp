@@ -12,6 +12,7 @@ int main()
     char option;
     option = 'X';
     string title;
+    string removal;
     course* name;
     courselist* C;
     int courseCount=0;
@@ -37,7 +38,10 @@ int main()
         }
         else if (option == 'R')
         {
-            C->removeCourse(title);
+            cout << "Which course do you want to remove from the list? " << endl;
+            cin >> removal;
+            //name = new course(removal);
+            C->removeCourse(removal);
 
         }
         else
