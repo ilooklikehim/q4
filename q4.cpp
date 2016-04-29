@@ -40,7 +40,6 @@ int main()
         {
             cout << "Which course do you want to remove from the list? " << endl;
             cin >> removal;
-            //name = new course(removal);
             C->removeCourse(removal);
 
         }

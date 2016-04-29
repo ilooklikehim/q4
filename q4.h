@@ -60,16 +60,20 @@ public:
 
     while (curr!=NULL)
     {
-        if (curr->getName() == myremoval)
+        last = curr;
+        curr = curr->getNext();
+        if (firstcourse->getName() == myremoval)
         {
-            last = curr;
-            curr = curr->getNext();
-            delete curr;
+            delete firstcourse;
             return;
         }
-        last->setNext(curr);
+        last->setNext(firstcourse);
     }
-    if (!curr){
+    if (firstcourse == NULL)
+    {
+        cout << "The list is already empty. " << endl;
+    }
+    else if (!curr){
         cout << "That name is not in the list" << endl;
     }
 }
