@@ -58,24 +58,31 @@ public:
     course* curr = firstcourse;
     course* last = curr;
 
+    if (firstcourse == NULL)
+    {
+        cout << "The list is already empty. " << endl;
+        return;
+    }
+    if(firstcourse->getName() == myremoval)
+    {
+        firstcourse = firstcourse->getNext();
+        delete curr;
+        return;
+    }
     while (curr!=NULL)
     {
         last = curr;
         curr = curr->getNext();
-        if (firstcourse->getName() == myremoval)
+        if (curr->getName() == myremoval)
         {
-            delete firstcourse;
+            last->setNext(curr->getNext());
+            delete curr;
             return;
         }
-        last->setNext(firstcourse);
     }
-    if (firstcourse == NULL)
-    {
-        cout << "The list is already empty. " << endl;
-    }
-    else if (!curr){
-        cout << "That name is not in the list" << endl;
-    }
+
+    cout << "That name is not in the list" << endl;
+
 }
 
     void display()
